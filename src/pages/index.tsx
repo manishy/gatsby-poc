@@ -6,7 +6,6 @@ export const PureIndexPage = ({ data }) => (
   <div>
     <div>
       <div>{<Books books={data.allContentfulBook.edges} />}</div>
-      <> hello </>
     </div>
   </div>
 );
