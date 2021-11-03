@@ -2,7 +2,7 @@ const { basename, resolve } = require("path")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const bookTemplate = resolve("./src/templates/book.js")
+  const bookTemplate = resolve("./src/templates/book.tsx")
 
   const res = await graphql(`
     query {
