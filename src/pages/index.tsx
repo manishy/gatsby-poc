@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Books from "../components/books";
+import Books from "../components/Books";
 
 export const PureIndexPage = ({ data }) => (
   <div>
