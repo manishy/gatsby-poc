@@ -1,5 +1,5 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 export const query = graphql`
   query($slug: String!) {
@@ -8,16 +8,16 @@ export const query = graphql`
       author
     }
   }
-`
+`;
 
-const Book = props => {
-  const book = props.data.contentfulBook
+const Book = (props) => {
+  const book = props.data.contentfulBook;
   return (
     <div>
       <h2>{book.name}</h2>
       <span>{book.author}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Book
+export default Book;

@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+
   res.data.allContentfulBook.edges.forEach(edge => {
     createPage({
       component: bookTemplate,

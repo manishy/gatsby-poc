@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index renders correctly 1`] = `
+<div>
+  <div>
+    <div>
+      <div>
+        <a
+          href="/book/some_slug"
+        >
+          <div
+            className="tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5"
+          >
+            <h3>
+              some_book
+            </h3>
+            <p>
+              some_author
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
