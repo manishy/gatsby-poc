@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Book = ({ bookDetails }) => {
+const BookSummary = ({ bookDetails }) => {
   return (
     <Link to={`/book/${bookDetails.slug}`}>
       <div className="tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5">
@@ -12,4 +12,4 @@ const Book = ({ bookDetails }) => {
   );
 };
 
-export default Book;
+export default BookSummary;
