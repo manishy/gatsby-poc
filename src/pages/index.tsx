@@ -22,7 +22,7 @@ export const Layout = ({ data }: { data: ILayout }) => {
   const books = booksData.map((edge: IEdge, index: number) => {
     return <Book bookDetails={edge.node} key={`book_${index}`} />;
   });
-  return <div>{books}</div>;
+  return <div className="layout">{books}</div>;
 };
 
 const IndexPage = () => {
