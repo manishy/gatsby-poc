@@ -1,15 +1,29 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Books from "../components/Books";
-import './index.scss';
+import "./index.scss";
+import Book from "../components/Book";
 
-export const PureIndexPage = ({ data }) => (
-  <div className="main">
-    <div>
-      <div>{<Books books={data.allContentfulBook.edges} />}</div>
-    </div>
-  </div>
-);
+interface IEdge {
+  node: {
+    slug: string;
+    name: string;
+    author: string;
+  };
+}
+
+interface ILayout {
+  allContentfulBook: {
+    edges: IEdge[];
+  };
+}
+
+export const Layout = ({ data }: { data: ILayout }) => {
+  const booksData = data.allContentfulBook.edges;
+  const books = booksData.map((edge: IEdge, index: number) => {
+    return <Book bookDetails={edge.node} key={`book_${index}`} />;
+  });
+  return <div>{books}</div>;
+};
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +40,7 @@ const IndexPage = () => {
     }
   `);
 
-  return <PureIndexPage data={data} />;
+  return <Layout data={data} />;
 };
 
 export default IndexPage;
