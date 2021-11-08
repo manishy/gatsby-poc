@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const res = await graphql(`
     query {
-      allContentfulBook {
+      allContentfulBook(filter: {node_locale: {eq: "en-US"}}) {
         edges {
           node {
             slug

@@ -28,7 +28,7 @@ export const Layout = ({ data }: { data: ILayout }) => {
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBook {
+      allContentfulBook(filter: { node_locale: { eq: "en-US" } }) {
         edges {
           node {
             name
